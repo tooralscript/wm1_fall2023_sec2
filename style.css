@@ -7,33 +7,136 @@
 
 body {
   padding: 20px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     111.4deg,
     rgba(7, 7, 9, 1) 6.5%,
     rgba(27, 24, 113, 1) 93.2%
-  );
+  ); */
+  background-color: rgb(20, 17, 101);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.div-name {
+.header {
+  width: 100%;
+  height: 60px;
+  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 50px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background-image: linear-gradient(135deg, #92ffc0 10%, #002661 100%);
-  font-size: 24px;
-  font-weight: 500;
-  color: white;
+  /* border: 1px solid white; */
 }
 
-h1 {
-  color: red;
+.header > a {
+  background-color: rgb(190, 189, 189);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  width: 15%;
+  height: 100%;
+  color: rgb(20, 17, 101);
+  cursor: pointer;
+  text-decoration: none;
+  /* border: 1px solid red; */
+}
+
+.header > a:hover {
+  background-color: rgb(57, 52, 192);
+  color: rgb(190, 189, 189);
+  transition: all ease-in-out 0.3s;
+}
+
+.header > a:nth-of-type(1),
+.header > a:nth-of-type(3) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 5px;
+}
+
+.header > a:nth-of-type(2),
+.header > a:nth-of-type(4) {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 15px;
+}
+
+.about_me {
+  margin-top: 100px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 40px;
+}
+
+.about_me > img {
+  width: 225px;
+  height: 225px;
+}
+
+.about_me > span {
+  font-family: "Ubuntu";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(190, 189, 189);
+  text-align: justify;
+}
+
+.education-table {
+  padding: 0;
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+  width: 60%;
+  height: fit-content;
+  border-collapse: collapse;
+}
+
+.education-table td {
+  border: 3px solid rgb(190, 189, 189);
+  height: 50px;
+  text-align: center;
+}
+
+form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  /* width: 60%; */
+}
+
+form label {
+  color: white;
+  font-size: 24px;
+}
+
+form > button {
+  width: 100px !important;
+  height: 40px !important;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form > div > input {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-indent: 3px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+form > div > input:focus-visible {
+  outline: none;
 }
