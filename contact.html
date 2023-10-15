@@ -4,9 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./img/TH.png" type="image/png">
   <title>WM1</title>
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -16,9 +22,12 @@
     <a href="./education.html">Education</a>
     <a href="./contact.html">Contact me</a>
     <a href="./questionnaire.html">Questionnaire</a>
+    <a href="https://github.com/tooralscript" target="_blank">Github Acc</a>
+    <a href="https://github.com/tooralscript/wm1_fall2023_sec2" target="_blank">Github Page</a>
+    <a href="">PDC</a>
   </div>
 
-  <form>
+  <form class="contact-form">
 
     <div>
       <label for="fname">First name:</label>
@@ -32,12 +41,13 @@
 
     <div>
       <label for="message">Your message:</label>
-      <input type="text" id="message">
+      <textarea id="message" placeholder="Type your message here..."></textarea>
     </div>
 
 
     <button type="submit">Submit</button>
   </form>
+
 
 </body>
 

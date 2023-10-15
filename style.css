@@ -2,29 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
   padding: 20px;
-  /* background-image: linear-gradient(
-    111.4deg,
-    rgba(7, 7, 9, 1) 6.5%,
-    rgba(27, 24, 113, 1) 93.2%
-  ); */
   background-color: rgb(20, 17, 101);
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .header {
-  width: 100%;
+  width: 90%;
   height: 60px;
   gap: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   /* border: 1px solid white; */
 }
@@ -36,7 +32,7 @@ body {
   align-items: center;
   font-size: 24px;
   font-weight: 700;
-  width: 15%;
+  width: 20%;
   height: 100%;
   color: rgb(20, 17, 101);
   cursor: pointer;
@@ -50,34 +46,40 @@ body {
   transition: all ease-in-out 0.3s;
 }
 
-.header > a:nth-of-type(1),
-.header > a:nth-of-type(3) {
+.header > a {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 15px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 5px;
 }
 
-.header > a:nth-of-type(2),
-.header > a:nth-of-type(4) {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 15px;
-}
-
 .about_me {
   margin-top: 100px;
-  width: 100%;
-  height: fit-content;
+  width: 90%;
   display: flex;
-  /* justify-content: space-between; */
-  gap: 40px;
+  align-items: center;
+  gap: 90px;
 }
 
-.about_me > img {
-  width: 225px;
-  height: 225px;
+.img_container {
+  width: 250px !important;
+  height: 250px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid rgb(153, 255, 0); */
+  padding: 30px;
+}
+
+#profilePhoto:hover {
+  width: 230px;
+  height: 230px;
+}
+
+#profilePhoto {
+  width: 210px;
+  height: 210px;
+  cursor: pointer;
 }
 
 .about_me > span {
@@ -89,13 +91,40 @@ body {
   text-align: justify;
 }
 
-.education-table {
-  padding: 0;
-  margin-top: 50px;
-  color: white;
+hr {
+  margin-top: 100px;
+  width: 80%;
+  border-top: 5px dotted rgb(255, 187, 0);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.courses {
+  margin-top: 100px;
+  width: 90%;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.courses > span {
   font-size: 24px;
-  width: 60%;
-  height: fit-content;
+  color: white;
+  font-weight: 700;
+}
+
+.courses > ul > li {
+  font-size: 18px;
+  color: white;
+}
+
+.education-table {
+  margin-top: 80px;
+  color: rgb(20, 17, 101);
+  font-size: 24px;
+  width: 70%;
   border-collapse: collapse;
 }
 
@@ -105,21 +134,38 @@ body {
   text-align: center;
 }
 
-form {
+.education-table > thead > tr > td {
+  background-color: rgb(6, 82, 232);
+  color: white;
+}
+
+.education-table tr:nth-of-type(odd) {
+  background-color: rgb(169, 169, 169);
+}
+
+.education-table tr:nth-of-type(even) {
+  background-color: rgb(199, 198, 198);
+}
+
+.education-table td {
+  border: none;
+  font-weight: 700;
+}
+
+.contact-form {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
-  /* width: 60%; */
 }
 
-form label {
+.contact-form label {
   color: white;
   font-size: 24px;
 }
 
-form > button {
+.contact-form > button {
   width: 100px !important;
   height: 40px !important;
   border: none;
@@ -128,15 +174,89 @@ form > button {
   cursor: pointer;
 }
 
-form > div > input {
+.contact-form > div {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form > div > input {
   height: 30px;
   border: none;
   border-radius: 5px;
-  text-indent: 3px;
-  margin-left: 20px;
+  text-indent: 5px;
+  /* margin-left: 20px; */
   width: 200px;
 }
 
-form > div > input:focus-visible {
+.contact-form > div > textarea {
+  /* height: 30px; */
+  border: none;
+  border-radius: 5px;
+  text-indent: 5px;
+  /* margin-left: 20px; */
+  width: 200px;
+  height: 150px;
+  resize: none;
+}
+
+.contact-form > div > textarea:focus-visible {
+  outline: none;
+}
+
+.contact-form > div > input:focus-visible {
+  outline: none;
+}
+
+.questionnaire {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.questionnaire label {
+  color: white;
+  font-size: 24px;
+}
+
+.questionnaire > input[type="submit"] {
+  width: 100px !important;
+  height: 40px !important;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.questionnaire > div {
+  display: flex;
+  gap: 20px;
+}
+
+.questionnaire > div > input {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-indent: 5px;
+  /* margin-left: 20px; */
+  width: 200px;
+}
+
+.questionnaire > div > textarea {
+  /* height: 30px; */
+  border: none;
+  border-radius: 5px;
+  text-indent: 5px;
+  /* margin-left: 20px; */
+  width: 200px;
+  height: 150px;
+  resize: none;
+}
+
+.questionnaire > div > textarea:focus-visible {
+  outline: none;
+}
+
+.questionnaire > div > input:focus-visible {
   outline: none;
 }
